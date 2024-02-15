@@ -1,0 +1,128 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: hsl(30, 38%, 92%);
+}
+
+.container .right-side {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.container .right-side .product-type,
+.container .right-side .description {
+  font-family: "Montserrat";
+  color: hsl(233, 8%, 59%);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+.container .right-side .product-name h1 {
+  text-transform: capitalize;
+  font-family: "Fraunces";
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.container .right-side .description {
+  text-transform: none;
+  letter-spacing: normal;
+  font-size: 0.9rem;
+}
+
+.container .right-side .price {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.container .right-side .price .new {
+  font-family: "Fraunces";
+  color: hsl(157, 33%, 37%);
+  margin-right: 15px;
+  font-size: 1.2rem;
+}
+
+.container .right-side .price .old {
+  font-family: "Montserrat";
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: hsl(233, 8%, 59%);
+}
+
+.container .right-side .btn {
+  background-color: hsl(157, 33%, 37%);
+  color: hsl(0, 0%, 100%);
+  font-family: "Montserrat";
+  font-size: 11px;
+  font-weight: 600;
+  padding: 10px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .right-side .btn img {
+  margin-right: 0.9rem;
+}
+
+.container .right-side .btn:hover {
+  background-color: hsl(156, 42%, 18%);
+  cursor: pointer;
+}
+
+@media (min-width: 377px) {
+  .container {
+    display: flex;
+    width: 35rem;
+    height: 26rem;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  .container .left-side,
+  .container .right-side {
+    width: 50%;
+  }
+
+  .container .left-side img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media (max-width: 376px) {
+  .container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    border-radius: 10px;
+    background-color: hsl(0, 0%, 100%);
+    overflow: hidden;
+  }
+
+  .container .left-side img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+  }
+  .container .right-side {
+    padding: 20px;
+  }
+}
